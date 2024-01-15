@@ -1,0 +1,14 @@
+FROM python:latest
+#pull python image
+
+#set dir
+WORKDIR /app/
+
+#copy app
+COPY . /app/
+
+#install dependencys
+RUN pip install -r requirements.txt
+
+#run application
+CMD [ "python","app.py" ]
